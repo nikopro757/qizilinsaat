@@ -38,6 +38,7 @@
             font-size: 16px;
             padding: 8px 12px;
             transition: background 0.3s, color 0.3s;
+            cursor: pointer;
         }
 
         nav a:hover {
@@ -79,6 +80,29 @@
             transform: translateY(-5px);
         }
 
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project {
+            flex: 1 1 300px;
+            background: #fff8e1;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
         footer {
             background: #FFD700;
             color: #003366;
@@ -101,7 +125,7 @@
         }
 
         @media (max-width: 700px) {
-            .services {
+            .services, .projects {
                 flex-direction: column;
             }
 
@@ -117,23 +141,20 @@
         <h1>Qızıl İnşaat MMC</h1>
         <p>Təmir və Tikinti üzrə Peşəkar Həllər</p>
     </header>
+
     <nav>
         <a onclick="showSection('haqqimizda')">Haqqımızda</a>
         <a onclick="showSection('xidmetler')">Xidmətlər</a>
+        <a onclick="showSection('layiheler')">Layihələr</a>
         <a onclick="showSection('elaqe')">Əlaqə</a>
         <a onclick="showSection('mekan')">Məkan</a>
     </nav>
+
     <div class="container">
         <section id="haqqimizda" class="hidden">
             <h2>Haqqımızda</h2>
             <p>
-                <strong>Qızıl İnşaat MMC</strong> – müasir texnologiyalara əsaslanan, yüksək keyfiyyətli təmir və tikinti xidmətləri göstərən bir şirkətdir. Məqsədimiz müştərilərimizə dayanıqlı, estetik və funksional həllər təqdim edərək, rahat və təhlükəsiz yaşayış və iş məkanları yaratmaqdır.
-            </p>
-            <p>
-                Şirkətimiz hər bir layihəyə fərdi yanaşma sərgiləyir və işini peşəkar mühəndis, ustalar və dizaynerlər komandası ilə yerinə yetirir. İstər mənzil təmiri, istər yeni obyektlərin tikintisi, istərsə də interyer dizaynı – bütün sahələrdə etibarlı və vaxtında xidmət təqdim edirik.
-            </p>
-            <p>
-                Əsas dəyərlərimiz – <strong>etibarlılıq</strong>, <strong>keyfiyyət</strong>, <strong>şəffaflıq</strong> və <strong>müştəri məmnuniyyətidir</strong>. Hədəfimiz uzunmüddətli əməkdaşlıqlar qurmaq və hər bir müştərimizin etimadını qazanmaqdır.
+                <strong>Qızıl İnşaat MMC</strong> – müasir texnologiyalara əsaslanan, yüksək keyfiyyətli təmir və tikinti xidmətləri göstərən bir şirkətdir...
             </p>
         </section>
 
@@ -155,10 +176,30 @@
             </div>
         </section>
 
+        <section id="layiheler" class="hidden">
+            <h2>Layihələrimiz</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="layihe1.png" alt="Layihə 1">
+                    <h3>Layihə 1</h3>
+                    <p>Klassik üslubda çoxmərtəbəli bina layihəsi.</p>
+                </div>
+                <div class="project">
+                    <img src="layihe2.png" alt="Layihə 2">
+                    <h3>Layihə 2</h3>
+                    <p>Müasir dizaynda fərdi yaşayış evi.</p>
+                </div>
+                <div class="project">
+                    <img src="layihe3.png" alt="Layihə 3">
+                    <h3>Layihə 3</h3>
+                    <p>Yeni inşa olunmuş yaşayış kompleksi.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="elaqe" class="hidden">
             <h2>Əlaqə</h2>
             <p>
-                Bizimlə əlaqə saxlamaq üçün:<br>
                 Telefon: <a href="tel:+994513024899">+994 51 302 48 99</a><br>
                 Email: <a href="mailto:info@qizilinsaat.az">info@qizilinsaat.az</a>
             </p>
@@ -166,15 +207,11 @@
 
         <section id="mekan" class="hidden">
             <h2>Məkan</h2>
-            <p>
-                Ünvan: Bakı şəhəri, H.Aslanov metro stansiyası ilə üzbəüz.
-            </p>
-            <iframe 
-                src="https://www.google.com/maps?q=H.Aslanov+metro+Baku&output=embed"
-                allowfullscreen="" loading="lazy">
-            </iframe>
+            <p>Ünvan: Bakı şəhəri, H.Aslanov metro stansiyası ilə üzbəüz.</p>
+            <iframe src="https://www.google.com/maps?q=H.Aslanov+metro+Baku&output=embed" allowfullscreen="" loading="lazy"></iframe>
         </section>
     </div>
+
     <footer>
         &copy; 2024 Qızıl İnşaat MMC. Bütün hüquqlar qorunur.
     </footer>
@@ -186,8 +223,8 @@
             document.getElementById(sectionId).classList.remove("hidden");
         }
 
-        // İlk açılışda hansı hissə görünsün:
-        // showSection("haqqimizda");
+        // Varsayılan açılış hissəsi:
+        showSection("haqqimizda");
     </script>
 </body>
 </html>
