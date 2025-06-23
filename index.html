@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qızıl İnşaat MMC - Təmir və Tikinti Şirkəti</title>
   <style>
     body {
@@ -11,28 +11,22 @@
       background: #f4f4f4;
       color: #333;
     }
-
     header {
       background: linear-gradient(to right, #FFD700, #FFC300);
       color: #003366;
       padding: 30px 20px;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       gap: 30px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-
     header img {
       height: 100px;
       border-radius: 12px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
-
     .header-text {
       flex: 1;
     }
-
     nav {
       background: #FFD700;
       padding: 15px 0;
@@ -40,9 +34,7 @@
       position: sticky;
       top: 0;
       z-index: 999;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-
     nav a {
       color: #003366;
       text-decoration: none;
@@ -53,13 +45,11 @@
       transition: background 0.3s, color 0.3s;
       cursor: pointer;
     }
-
     nav a:hover {
       background: #003366;
       color: #FFD700;
       border-radius: 5px;
     }
-
     .container {
       max-width: 1100px;
       margin: 40px auto;
@@ -68,14 +58,12 @@
       border-radius: 10px;
       box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     }
-
     .services, .projects {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       margin-top: 20px;
     }
-
     .service, .project {
       flex: 1 1 280px;
       background: #f8f9fa;
@@ -85,21 +73,17 @@
       text-align: center;
       transition: transform 0.3s;
     }
-
     .service:hover, .project:hover {
       transform: translateY(-5px);
     }
-
     .project img {
       width: 100%;
       height: auto;
       border-radius: 8px;
     }
-
     .hidden {
       display: none;
     }
-
     iframe {
       border: none;
       border-radius: 8px;
@@ -107,7 +91,6 @@
       height: 300px;
       margin-top: 20px;
     }
-
     footer {
       background: #FFD700;
       color: #003366;
@@ -116,17 +99,11 @@
       margin-top: 40px;
       font-weight: bold;
     }
-
     @media (max-width: 700px) {
       header {
         flex-direction: column;
         text-align: center;
       }
-
-      header img {
-        margin-bottom: 10px;
-      }
-
       .services, .projects {
         flex-direction: column;
       }
@@ -135,68 +112,100 @@
 </head>
 <body>
 
-  <header>
-    <img src="logo.jpg" alt="Qızıl İnşaat MMC Loqosu">
-    <div class="header-text">
-      <h1>Qızıl İnşaat MMC</h1>
-      <p>Təmir və Tikinti üzrə Peşəkar Həllər</p>
-    </div>
-  </header>
-
-  <nav>
-    <a onclick="showSection('haqqimizda')">Haqqımızda</a>
-    <a onclick="showSection('xidmetler')">Xidmətlər</a>
-    <a onclick="showSection('layiheler')">Layihələr</a>
-    <a onclick="showSection('elaqe')">Əlaqə</a>
-    <a onclick="showSection('mekan')">Məkan</a>
-  </nav>
-
-  <div class="container">
-    <section id="haqqimizda" class="hidden">
-      <h2>Haqqımızda</h2>
-
-      <h3>👷 Biz Kimik?</h3>
-      <p>
-        <strong>Qızıl İnşaat MMC</strong>, Azərbaycanın inşaat və təmir sahəsində fəaliyyət göstərən peşəkar şirkətlərindən biridir. 10 ildən çox təcrübəmizlə, həm yaşayış, həm də kommersiya obyektlərində yüzlərlə layihəni uğurla tamamlamışıq.
-      </p>
-
-      <h3>✅ Niyə Bizi Seçməlisiniz?</h3>
-      <ul style="line-height: 1.8;">
-        <li><strong>Keyfiyyətə zəmanət:</strong> Bütün layihələrdə uzunmüddətli materiallar və müasir texnologiyalar istifadə olunur.</li>
-        <li><strong>Dəqiq təhvil:</strong> Vaxtında başa çatdırılan layihələr, razı qalan müştərilər.</li>
-        <li><strong>Şəffaf əməkdaşlıq:</strong> Qiymət, plan və proseslər tam aydın və yazılı şəkildə təqdim olunur.</li>
-      </ul>
-
-      <h3>👨‍🔧 Komandamız</h3>
-      <p>
-        Peşəkar mühəndislər, memarlar, usta və dizaynerlərdən ibarət komandamız hər bir layihəyə fərdi yanaşma ilə yaxınlaşır. Komandamız davamlı təlimlər alır və ən son inşaat trendlərini izləyir.
-      </p>
-
-      <h3>🎯 Məqsədimiz</h3>
-      <p>
-        Missiyamız — insanların həyat keyfiyyətini artıran estetik və təhlükəsiz məkanlar yaratmaqdır. Hədəfimiz, Azərbaycanda inşaat sahəsində etibar olunan lider brend olmaqdır.
-      </p>
-
-      <p style="margin-top: 20px;"><em>Biz sizin arzularınızı reallığa çeviririk – tikinti bizim sənətimizdir!</em></p>
-    </section>
-
-    <!-- Qalan bölmələr: Xidmətlər, Layihələr, Əlaqə, Məkan -->
-    <!-- (Eyni olaraq saxlanılıb, dəyişiklik edilməyib) -->
-
+<header>
+  <img src="logo.jpg" alt="Qızıl İnşaat MMC Loqosu">
+  <div class="header-text">
+    <h1>Qızıl İnşaat MMC</h1>
+    <p>Təmir və Tikinti üzrə Peşəkar Həllər</p>
   </div>
+</header>
 
-  <footer>
-    &copy; 2024 Qızıl İnşaat MMC. Bütün hüquqlar qorunur.
-  </footer>
+<nav>
+  <a onclick="showSection('haqqimizda')">Haqqımızda</a>
+  <a onclick="showSection('xidmetler')">Xidmətlər</a>
+  <a onclick="showSection('layiheler')">Layihələr</a>
+  <a onclick="showSection('elaqe')">Əlaqə</a>
+  <a onclick="showSection('mekan')">Məkan</a>
+</nav>
 
-  <script>
-    function showSection(sectionId) {
-      const sections = document.querySelectorAll("section");
-      sections.forEach(sec => sec.classList.add("hidden"));
-      document.getElementById(sectionId).classList.remove("hidden");
-    }
-    showSection("haqqimizda");
-  </script>
+<div class="container">
+  <section id="haqqimizda">
+    <h2>Haqqımızda</h2>
+    <h3>👷 Biz Kimik?</h3>
+    <p><strong>Qızıl İnşaat MMC</strong> – müasir texnologiyalarla fəaliyyət göstərən, keyfiyyətli təmir və tikinti xidmətləri təqdim edən şirkətdir.</p>
+    <h3>✅ Niyə Bizi Seçməlisiniz?</h3>
+    <ul style="line-height:1.8">
+      <li><strong>Keyfiyyətli materiallar və zəmanət.</strong></li>
+      <li><strong>Dəqiq vaxtında təhvil.</strong></li>
+      <li><strong>Şəffaf əməkdaşlıq və qiymət sistemi.</strong></li>
+    </ul>
+    <h3>👨‍🔧 Komandamız</h3>
+    <p>Peşəkar mühəndis və ustalar komandası ilə layihələrinizi uğurla icra edirik.</p>
+    <h3>🎯 Məqsədimiz</h3>
+    <p>Etibar olunan lider inşaat brendi olmaq və gözəl, təhlükəsiz məkanlar yaratmaq.</p>
+  </section>
+
+  <section id="xidmetler" class="hidden">
+    <h2>Xidmətlərimiz</h2>
+    <div class="services">
+      <div class="service">
+        <h3>🏠 Ev və Ofis Təmir</h3>
+        <p>Kosmetik, kapital və dizayn təmiri.</p>
+      </div>
+      <div class="service">
+        <h3>🏗️ Tikinti Xidmətləri</h3>
+        <p>Yeni obyektlərin tikintisi və təhvil verilməsi.</p>
+      </div>
+      <div class="service">
+        <h3>🎨 Layihələndirmə</h3>
+        <p>Peşəkar interyer və eksteryer dizayn.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="layiheler" class="hidden">
+    <h2>Layihələrimiz</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="layihe1.webp" alt="Layihə 1">
+        <h4>Layihə 1</h4>
+      </div>
+      <div class="project">
+        <img src="layihe2.webp" alt="Layihə 2">
+        <h4>Layihə 2</h4>
+      </div>
+      <div class="project">
+        <img src="layihe3.webp" alt="Layihə 3">
+        <h4>Layihə 3</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="elaqe" class="hidden">
+    <h2>Əlaqə</h2>
+    <p>
+      Telefon: <a href="tel:+994513024899">+994 51 302 48 99</a><br>
+      Email: <a href="mailto:info@qizilinsaat.az">info@qizilinsaat.az</a>
+    </p>
+  </section>
+
+  <section id="mekan" class="hidden">
+    <h2>Məkan</h2>
+    <p>Ünvan: Bakı şəhəri, H.Aslanov metro stansiyası ilə üzbəüz.</p>
+    <iframe src="https://www.google.com/maps?q=H.Aslanov+metro+Baku&output=embed" loading="lazy"></iframe>
+  </section>
+</div>
+
+<footer>
+  &copy; 2024 Qızıl İnşaat MMC. Bütün hüquqlar qorunur.
+</footer>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll("section").forEach(s => s.classList.add("hidden"));
+    document.getElementById(id).classList.remove("hidden");
+  }
+</script>
 
 </body>
 </html>
