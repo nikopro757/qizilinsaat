@@ -50,10 +50,6 @@
       color: #FFD700;
       border-radius: 5px;
     }
-    .language-select {
-      text-align: right;
-      padding: 10px 20px;
-    }
     .container {
       max-width: 1100px;
       margin: 40px auto;
@@ -120,31 +116,33 @@
   <img src="logo.jpg" alt="Qızıl İnşaat MMC Loqosu">
   <div class="header-text">
     <h1>Qızıl İnşaat MMC</h1>
-    <p id="header-text">Təmir və Tikinti üzrə Peşəkar Həllər</p>
+    <p>Təmir və Tikinti üzrə Peşəkar Həllər</p>
   </div>
 </header>
 
 <nav>
-  <a onclick="showSection('haqqimizda')" id="nav-about">Haqqımızda</a>
-  <a onclick="showSection('xidmetler')" id="nav-services">Xidmətlər</a>
-  <a onclick="showSection('layiheler')" id="nav-projects">Layihələr</a>
-  <a onclick="showSection('elaqe')" id="nav-contact">Əlaqə</a>
-  <a onclick="showSection('mekan')" id="nav-location">Məkan</a>
+  <a onclick="showSection('haqqimizda')">Haqqımızda</a>
+  <a onclick="showSection('xidmetler')">Xidmətlər</a>
+  <a onclick="showSection('layiheler')">Layihələr</a>
+  <a onclick="showSection('elaqe')">Əlaqə</a>
+  <a onclick="showSection('mekan')">Məkan</a>
 </nav>
-
-<div class="language-select">
-  <label for="language">🌐 Dil seçin: </label>
-  <select id="language" onchange="changeLanguage(this.value)">
-    <option value="az">AZ</option>
-    <option value="en">EN</option>
-    <option value="ru">RU</option>
-  </select>
-</div>
 
 <div class="container">
   <section id="haqqimizda">
     <h2>Haqqımızda</h2>
+    <h3>👷 Biz Kimik?</h3>
     <p><strong>Qızıl İnşaat MMC</strong> – müasir texnologiyalarla fəaliyyət göstərən, keyfiyyətli təmir və tikinti xidmətləri təqdim edən şirkətdir.</p>
+    <h3>✅ Niyə Bizi Seçməlisiniz?</h3>
+    <ul style="line-height:1.8">
+      <li><strong>Keyfiyyətli materiallar və zəmanət.</strong></li>
+      <li><strong>Dəqiq vaxtında təhvil.</strong></li>
+      <li><strong>Şəffaf əməkdaşlıq və qiymət sistemi.</strong></li>
+    </ul>
+    <h3>👨‍🔧 Komandamız</h3>
+    <p>Peşəkar mühəndis və ustalar komandası ilə layihələrinizi uğurla icra edirik.</p>
+    <h3>🎯 Məqsədimiz</h3>
+    <p>Etibar olunan lider inşaat brendi olmaq və gözəl, təhlükəsiz məkanlar yaratmaq.</p>
   </section>
 
   <section id="xidmetler" class="hidden">
@@ -169,15 +167,15 @@
     <h2>Layihələrimiz</h2>
     <div class="projects">
       <div class="project">
-        <img src="layihe1.png" alt="Layihə 1">
+        <img src="layihe1.webp" alt="Layihə 1">
         <h4>Layihə 1</h4>
       </div>
       <div class="project">
-        <img src="layihe2.png" alt="Layihə 2">
+        <img src="layihe2.webp" alt="Layihə 2">
         <h4>Layihə 2</h4>
       </div>
       <div class="project">
-        <img src="layihe3.png" alt="Layihə 3">
+        <img src="layihe3.webp" alt="Layihə 3">
         <h4>Layihə 3</h4>
       </div>
     </div>
@@ -207,49 +205,6 @@
     document.querySelectorAll("section").forEach(s => s.classList.add("hidden"));
     document.getElementById(id).classList.remove("hidden");
   }
-
-  const translations = {
-    az: {
-      about: "Haqqımızda",
-      services: "Xidmətlər",
-      projects: "Layihələr",
-      contact: "Əlaqə",
-      location: "Məkan",
-      title: "Qızıl İnşaat MMC - Təmir və Tikinti Şirkəti",
-      header: "Təmir və Tikinti üzrə Peşəkar Həllər"
-    },
-    en: {
-      about: "About Us",
-      services: "Services",
-      projects: "Projects",
-      contact: "Contact",
-      location: "Location",
-      title: "Qizil Insaat LLC - Repair and Construction Company",
-      header: "Professional Solutions in Repair and Construction"
-    },
-    ru: {
-      about: "О нас",
-      services: "Услуги",
-      projects: "Проекты",
-      contact: "Контакт",
-      location: "Местоположение",
-      title: "Qızıl İnşaat ООО - Ремонт и Строительство",
-      header: "Профессиональные решения в ремонте и строительстве"
-    }
-  };
-
-  function changeLanguage(lang) {
-    document.title = translations[lang].title;
-    document.getElementById("nav-about").textContent = translations[lang].about;
-    document.getElementById("nav-services").textContent = translations[lang].services;
-    document.getElementById("nav-projects").textContent = translations[lang].projects;
-    document.getElementById("nav-contact").textContent = translations[lang].contact;
-    document.getElementById("nav-location").textContent = translations[lang].location;
-    document.getElementById("header-text").textContent = translations[lang].header;
-  }
-
-  // İlk bölməni göstər
-  showSection("haqqimizda");
 </script>
 
 </body>
